@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiem tra va cham 2 hinh chu nhat</title>
+</head>
+
+<body>
+    <script>
+        function Rect(xPosition, yPosition, width, height) {
+            this.x = xPosition
+            this.y = yPosition
+            this.w = width
+            this.h = height
+        }
+
+        let rect1 = new Rect(4, 7, 5, 6)
+        let rect2 = new Rect(0, 1, 5, 6)
+
+        checkRectAndRectIsTouch(rect1,rect2)
+
+        function checkRectAndRectIsTouchX(rect1, rect2) {
+            let resultTouchX = ((Math.abs(rect1.x + rect1.w / 2)) - (Math.abs(rect2.x + rect2.w / 2))) <= ((rect1.w + rect2.w) / 2)
+            console.log(resultTouchX)
+        }
+
+        function checkRectAndRectIsTouchY(rect1,rect2) {
+            let resultTouchY = ((Math.abs(rect1.y + rect1.h / 2)) - (Math.abs(rect2.y + rect2.h / 2))) <= ((rect1.h + rect2.h) / 2)
+            console.log(resultTouchX)
+        }
+
+        function checkRectAndRectIsTouch(rect1,rect2) {
+            let result = (checkRectAndRectIsTouchX(rect1,rect2) && checkRectAndRectIsTouchY(rect1,rect2))
+            console.log(result)
+        }
+
+
+    </script>
+</body>
+
+</html>
